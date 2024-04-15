@@ -1,8 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteTask, toggleTask } from '../actions/taskActions';
+import { deleteTask, toggleTask } from '../../actions/taskActions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import './TaskList.css';
 
 const TaskList = () => {
     // Accessing the tasks state from the Redux store
@@ -19,16 +20,17 @@ const TaskList = () => {
         dispatch(toggleTask(taskId));
     };
 
-  
     // Function to save the tasks to local storage
-    const handleSaveTasks = () => {
-        localStorage.setItem('tasks', JSON.stringify(tasks));
-    };
+    // Function to save the tasks to local storage and display an alert
+const handleSaveTasks = () => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    alert('Tasks saved successfully!');
+};
 
     return (
-        // Bootstrap container to center the content
-        <div className="container">
-            <h1 className="text-center my-4">My Tasks</h1>
+        // Card styling for the TaskList component
+        <div className="container task-card">
+            <h1 className="my-4 text-center"><span className='my-task'>My Tasks</span></h1>
             <ul className="list-group" style={{ maxHeight: '70vh', overflowY: 'auto' }}>
                 {tasks.map((task, index) => (
                     <li key={index} className={`list-group-item ${task.completed ? 'bg-light' : ''}`}>
@@ -50,7 +52,8 @@ const TaskList = () => {
                     </li>
                 ))}
             </ul>
-            <button className="btn btn-primary mt-3" onClick={handleSaveTasks}>Save</button>
+            {/* Save button with custom styling */}
+            <button className="save" onClick={handleSaveTasks}>Save</button>
         </div>
     );
 };

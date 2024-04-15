@@ -1,0 +1,27 @@
+/* TaskList.css */
+
+/* Card styling for the TaskList component */
+.task-card {
+    background: #96906e transparent ;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 20px; 
+  }
+  
+  /* Styling for the save button */
+  .save {
+    background-color: #926000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+  /* Hover effect for the save button */
+  .save:hover {
+    background-color: #302104;
+  }
+  

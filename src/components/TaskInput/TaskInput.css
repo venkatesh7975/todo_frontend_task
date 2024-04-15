@@ -1,0 +1,39 @@
+/* TaskInput.css */
+
+/* Card styling for the TaskInput component */
+.task-card {
+    background-color: #f3d940;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 20px;
+
+    background: transparent 50%;
+}
+  
+/* Styling for the save button */
+.save {
+    background-color: #926000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-weight: bold;
+}
+  
+/* Hover effect for the save button */
+.save:hover {
+    background-color: #302104;
+}
+.my-task{
+    font-weight: bold;
+    background-color: #f3d940;
+    width: 250px;
+    border-radius: 30px;
+    text-align: center;
+}
+.error{
+    font-weight: bold;
+    background-color: #f3d940;
+}
